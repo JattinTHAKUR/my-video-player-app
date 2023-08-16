@@ -1,0 +1,43 @@
+here we are using a chakra ui where we are using this drawer and the colortheme 
+which changes the color according to the user settings
+
+this function has a breif introduction of react hooks where ever we will 'use' function remember that it is hook function
+
+moreover there's this thing called VStack which we will study about ;
+the button and there variations are also to be learned moreover 
+
+*** in VStack we used alignItems funtion and by using 'flex-start' we placed all the elements  at left because the default property was alignItems 'center' and
+
+#VStack is a vertical stack and HStack is a horizontal stack
+
+<Stack direction={['column','row']}>
+here the direction of the stack signifies the direction depending upon the screen size
+if the size is small the column else row !!
+
+
+<Heading size={'md'} means heading size is medium
+
+```````````````````````````````````````````````````````````````````````````
+now here's some mind boggling shit :
+in Videos page we created an array of Videos using an constant function VideoArr
+the index is then  sent to src of video tag using src={videoSrc} 
+ now using hooks i.e useState function to access the index of array of videos
+ then in that video array we have used map method to create another array with new data.
+
+ VideoArr.map function uses item and index in the button 
+ {videosArr.map((item, index) => (
+          <Button
+            variant={'ghost'}
+            colorScheme={'purple'}
+            onClick={() => setVideoSrc(item)}
+          >
+            Lecture {index + 1}
+          </Button>
+        ))}
+
+
+`````````````````````````````````````````````````````````````````````````````
+onClick={() => setVideoSrc(item)} ispe click krte hi video ka source change hota rahega <3
+
+Lecture {index + 1}
+index zero se hota h isliye apne comfrt ke liye humne + 1 kiya
